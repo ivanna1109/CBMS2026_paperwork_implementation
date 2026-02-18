@@ -7,23 +7,20 @@ import numpy as np
 from torch_geometric.transforms import RandomLinkSplit
 from torch_geometric.utils import degree
 
-# Putanja do tvojih modula
 sys.path.append('/home/ivanam/CBMS_bioWork/')
 
 from load_data import load_data_flexible, evaluate_detailed
 from models.gnn import GNN_Model 
 
-# --- KONFIGURACIJA ---
 FILES = {
     'ChG-Miner': '/home/ivanam/CBMS_bioWork/eda/data/BioSNAP/ChG-Miner_miner-chem-gene.tsv.gz',
     'DCh-Miner': '/home/ivanam/CBMS_bioWork/eda/data/BioSNAP/DCh-Miner_miner-disease-chemical.tsv.gz'
 }
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# Preusmeravanje svega u fajl
 os.makedirs('results', exist_ok=True)
 log_file = open("results/training_log.txt", "w")
-sys.stdout = log_file # Od ovog trenutka svaki print ide u ovaj fajl
+sys.stdout = log_file 
 
 def train_and_eval(data, model_type):
     node_deg = degree(data.edge_index[0], data.num_nodes).numpy()
@@ -48,16 +45,12 @@ def train_and_eval(data, model_type):
         optimizer.step()
         
         if epoch % 10 == 0:
-            # Pratimo sve 4 metrike na validacionom skupu
             val_auc, val_cold_auc, val_ap, val_cold_ap = evaluate_detailed(DEVICE, model, val_data, val_data.x, node_deg)
-            
-            # Čuvamo najbolje rezultate na osnovu Overall AUC-a
+           
             if val_auc > best_val_auc:
                 best_val_auc = val_auc
-                # Final_results su testni rezultati postignuti sa najboljim modelom
                 final_results = evaluate_detailed(DEVICE, model, test_data, test_data.x, node_deg)
             
-            # Ispis u log fajl (sys.stdout preusmeren na training_log.txt)
             print(f" Epoch {epoch:03d} | Loss: {loss:.4f}")
             print(f"   > Validacija: AUC={val_auc:.4f}, AP={val_ap:.4f}")
             print(f"   > Cold Start Validacija: AUC={val_cold_auc:.4f}, AP={val_cold_ap:.4f}")
@@ -96,4 +89,4 @@ if __name__ == "__main__":
     try:
         run_full_experiment()
     finally:
-        log_file.close() # Zatvaranje fajla na kraju
+        log_file.close() 

@@ -8,7 +8,6 @@ from torch_geometric.transforms import RandomLinkSplit
 from torch_geometric.utils import degree
 from sklearn.metrics import roc_auc_score, average_precision_score
 
-# Putanja do modula
 sys.path.append('/home/ivanam/CBMS_bioWork/')
 
 from load_data import get_full_hetero_data
@@ -63,7 +62,6 @@ def get_top_cold_predictions(test_data, test_preds, data_original, drug_map, dis
     test_disease_indices = test_data['drug', 'treats', 'disease'].edge_label_index[1].cpu()
     test_labels = test_data['drug', 'treats', 'disease'].edge_label.cpu()
     
-    # Fokusiramo se na hladne lekove koji su stvarno povezani (pozitivni primeri)
     cold_mask = (drug_degree[test_drug_indices] <= 2) & (test_labels == 1)
     
     if cold_mask.sum() == 0:
@@ -133,7 +131,6 @@ def train_and_eval_hetero(data, drug_map, disease_map, model_type='GAT'):
                 
                 print(f" {model_type} Epoch {epoch:03d} | Loss: {loss:.4f} | Val AUC: {val_auc:.4f}")
 
-    # Analize na kraju treninga
     evaluate_cold_start(test_data, test_preds_final, data)
     get_top_cold_predictions(test_data, test_preds_final, data, drug_map, disease_map)
     
@@ -143,7 +140,6 @@ def train_and_eval_hetero(data, drug_map, disease_map, model_type='GAT'):
 def run_experiment():
     print("=== STARTING FULL EXPERIMENT: GAT vs GraphSAGE ===")
     
-    # Očekujemo da get_hetero_data vraća data, drug_map, disease_map
     data, drug_map, disease_map = get_full_hetero_data(CHG_PATH, DCH_PATH)
     
     results = []

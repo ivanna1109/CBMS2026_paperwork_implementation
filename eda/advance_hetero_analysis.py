@@ -19,21 +19,15 @@ def run_analysis(data, output_dir='results'):
     
     with open(report_path, 'w') as f:
         f.write("=== HETEROGENEOUS KNOWLEDGE GRAPH REPORT ===\n\n")
-        
-        # Statistika cvorova
         f.write("1. NODE STATISTICS\n")
         for node_type in data.node_types:
             f.write(f"  - {node_type.capitalize()}: {data[node_type].num_nodes} nodes\n")
-        
-        # Statistika ivica
         f.write("\n2. EDGE STATISTICS\n")
         for edge_type in data.edge_types:
             f.write(f"  - {edge_type}: {data[edge_type].num_edges} edges\n")
 
-        # Cold Start - Mostovi
         f.write("\n3. CROSS-DOMAIN CONNECTIVITY (THE BRIDGE)\n")
         
-        # Racunamo stepene
         drug_deg_disease = degree(data['drug', 'treats', 'disease'].edge_index[0], data['drug'].num_nodes).numpy()
         drug_deg_gene = degree(data['drug', 'targets', 'gene'].edge_index[0], data['drug'].num_nodes).numpy()
         
@@ -42,13 +36,11 @@ def run_analysis(data, output_dir='results'):
         for t in [1, 2, 3]:
             cold_mask = df_drugs['deg_dis'] <= t
             cold_count = cold_mask.sum()
-            # Koliko "hladnih" lekova ima bar 5 informacija o genima?
             recovered = df_drugs[cold_mask & (df_drugs['deg_gene'] >= 5)].shape[0]
             
             f.write(f"Drugs with <= {t} disease connections: {cold_count}\n")
             f.write(f"  -> Potential knowledge recovery (>= 5 gene links): {recovered} drugs\n")
 
-        # Latex Tabela
         f.write("\n4. LATEX SUMMARY TABLE\n" + "-"*15 + "\n")
         f.write("\\begin{table}[h]\n\\centering\n\\begin{tabular}{lrr}\n\\toprule\n")
         f.write("Entity & Count & Relations \\\\ \n\\midrule\n")
@@ -57,7 +49,6 @@ def run_analysis(data, output_dir='results'):
         f.write(f"Diseases & {data['disease'].num_nodes} & - \\\\ \n\\bottomrule\n")
         f.write("\\end{tabular}\n\\end{table}\n")
 
-    # Vizuelizacija - Korelacija stepena
     plt.figure(figsize=(10, 8))
     sns.set_context("paper", font_scale=1.2)
     joint_plot = sns.jointplot(data=df_drugs, x='deg_dis', y='deg_gene', kind="reg", color="teal")

@@ -8,14 +8,12 @@ from torch_geometric.transforms import RandomLinkSplit
 from torch_geometric.utils import degree
 from sklearn.metrics import roc_auc_score, average_precision_score
 
-# Putanja do tvojih modula
 sys.path.append('/home/ivanam/CBMS_bioWork/')
 
 from load_data import get_full_hetero_data
 from models.hetero_gnn import HeteroEncoder, HeteroSAGEEncoder, EdgePredictor, to_hetero
 from utils.visualizations import plot_degree_performance, save_case_study_table
 
-# --- KONFIGURACIJA ---
 CHG_PATH = '/home/ivanam/CBMS_bioWork/eda/data/BioSNAP/ChG-Miner_miner-chem-gene.tsv.gz'
 DCH_PATH = '/home/ivanam/CBMS_bioWork/eda/data/BioSNAP/DCh-Miner_miner-disease-chemical.tsv.gz'
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -126,7 +124,6 @@ def train_and_eval_hetero(data, drug_map, disease_map, model_type='GAT'):
                 
                 print(f" {model_type} Epoch {epoch:03d} | Loss: {loss:.4f} | Val AUC: {val_auc:.4f}")
 
-    # Prikupljanje podataka za eksterne analize
     deg_res = analyze_performance_by_degree(test_data, test_preds_final, data, model_type)
     case_study = get_top_cold_predictions(test_data, test_preds_final, data, drug_map, disease_map)
     
@@ -150,13 +147,10 @@ def run_experiment():
         summary_results.append({'Model': m_type, 'Test_AUC': round(auc, 4), 'Test_AP': round(ap, 4)})
         all_degree_results.extend(deg_res)
         
-        # Čuvanje case study tabele za svaki model posebno
         save_case_study_table(case_study, m_type, 'results_final/case_study')
 
-    # Kreiranje finalnog grafika
     plot_degree_performance(all_degree_results, save_path='results_final/degree_performance_plot.png')
 
-    # Finalni ispis
     df = pd.DataFrame(summary_results)
     print("\n" + "="*30)
     print("FINAL SUMMARY")

@@ -22,6 +22,6 @@ conda activate cbms_biosnap
 
 PYTHON_EXECUTABLE=$(which python)
 
-${PYTHON_EXECUTABLE} -u /home/ivanam/CBMS_bioWork/train_experiments/main_experiment.py
+${PYTHON_EXECUTABLE} -u /home/ivanam/CBMS_bioWork/train_experiments/initial_experiment.py
 
 echo "All files done."
