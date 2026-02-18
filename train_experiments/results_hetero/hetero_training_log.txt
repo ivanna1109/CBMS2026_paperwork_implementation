@@ -1,0 +1,28 @@
+=== STARTING HETEROGENEOUS EXPERIMENT ===
+ Epoch 010 | Loss: 0.4739 | Val AUC: 0.9054 | Val AP: 0.8352
+ Epoch 020 | Loss: 0.3124 | Val AUC: 0.9524 | Val AP: 0.9187
+ Epoch 030 | Loss: 0.2362 | Val AUC: 0.9595 | Val AP: 0.9386
+ Epoch 040 | Loss: 0.2058 | Val AUC: 0.9724 | Val AP: 0.9578
+ Epoch 050 | Loss: 0.1862 | Val AUC: 0.9760 | Val AP: 0.9632
+ Epoch 060 | Loss: 0.1714 | Val AUC: 0.9782 | Val AP: 0.9675
+ Epoch 070 | Loss: 0.1627 | Val AUC: 0.9798 | Val AP: 0.9702
+ Epoch 080 | Loss: 0.1611 | Val AUC: 0.9811 | Val AP: 0.9725
+ Epoch 090 | Loss: 0.1940 | Val AUC: 0.9815 | Val AP: 0.9736
+ Epoch 100 | Loss: 0.1554 | Val AUC: 0.9805 | Val AP: 0.9741
+
+========================================
+DETALJNA COLD START ANALIZA
+========================================
+Status: USPEŠNO IZRAČUNATO
+Prag (Degree): <= 2 veze sa bolestima
+Broj testiranih parova: 67087
+Cold AUC: 0.8471
+Cold AP:  0.0152
+========================================
+
+
+--- FINAL HETEROGENEOUS RESULTS ---
+        Model  Test_AUC  Test_AP
+0  Hetero-GAT    0.9814   0.9721
+
+=== EXPERIMENT FINISHED ===

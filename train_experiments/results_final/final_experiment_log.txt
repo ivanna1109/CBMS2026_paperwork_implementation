@@ -1,0 +1,56 @@
+=== STARTING FINAL RESEARCH EXPERIMENT WITH VISUALIZATION ===
+
+
+########################################
+# RUNNING MODEL: GAT
+########################################
+ GAT Epoch 010 | Loss: 0.4779 | Val AUC: 0.9036
+ GAT Epoch 020 | Loss: 0.3318 | Val AUC: 0.9463
+ GAT Epoch 030 | Loss: 0.2530 | Val AUC: 0.9648
+ GAT Epoch 040 | Loss: 0.2119 | Val AUC: 0.9690
+ GAT Epoch 050 | Loss: 0.1918 | Val AUC: 0.9747
+ GAT Epoch 060 | Loss: 0.1775 | Val AUC: 0.9773
+ GAT Epoch 070 | Loss: 0.1679 | Val AUC: 0.9794
+ GAT Epoch 080 | Loss: 0.1709 | Val AUC: 0.9796
+ GAT Epoch 090 | Loss: 0.1943 | Val AUC: 0.9811
+ GAT Epoch 100 | Loss: 0.1593 | Val AUC: 0.9816
+
+Analysis by Degree for GAT:
+  Degree <= 1: AUC = 0.7939
+  Degree <= 2: AUC = 0.8407
+  Degree <= 3: AUC = 0.8646
+  Degree <= 5: AUC = 0.9101
+  Degree <= 10: AUC = 0.9445
+--- Case study tabela (GAT) sačuvana na: results_final/case_study_GAT_top_preds.csv
+
+
+########################################
+# RUNNING MODEL: SAGE
+########################################
+ SAGE Epoch 010 | Loss: 0.5637 | Val AUC: 0.8735
+ SAGE Epoch 020 | Loss: 0.2584 | Val AUC: 0.9582
+ SAGE Epoch 030 | Loss: 0.1863 | Val AUC: 0.9786
+ SAGE Epoch 040 | Loss: 0.1505 | Val AUC: 0.9838
+ SAGE Epoch 050 | Loss: 0.1346 | Val AUC: 0.9861
+ SAGE Epoch 060 | Loss: 0.1264 | Val AUC: 0.9873
+ SAGE Epoch 070 | Loss: 0.1208 | Val AUC: 0.9880
+ SAGE Epoch 080 | Loss: 0.1170 | Val AUC: 0.9885
+ SAGE Epoch 090 | Loss: 0.1141 | Val AUC: 0.9888
+ SAGE Epoch 100 | Loss: 0.1119 | Val AUC: 0.9891
+
+Analysis by Degree for SAGE:
+  Degree <= 1: AUC = 0.9725
+  Degree <= 2: AUC = 0.9126
+  Degree <= 3: AUC = 0.8916
+  Degree <= 5: AUC = 0.9152
+  Degree <= 10: AUC = 0.9495
+--- Case study tabela (SAGE) sačuvana na: results_final/case_study_SAGE_top_preds.csv
+--- Grafik uspešno sačuvan na: results_final/degree_performance_plot.png
+
+==============================
+FINAL SUMMARY
+==============================
+Model  Test_AUC  Test_AP
+  GAT    0.9808   0.9709
+ SAGE    0.9884   0.9863
+==============================

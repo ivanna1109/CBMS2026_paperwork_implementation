@@ -1,0 +1,62 @@
+
+========== DATASET: ChG-Miner ==========
+Učitavam: /home/ivanam/CBMS_bioWork/eda/data/BioSNAP/ChG-Miner_miner-chem-gene.tsv.gz
+
+Trening modela: SAGE
+ Epoch 010 | Loss: 0.5352 | Val AUC: 0.6414
+ Epoch 020 | Loss: 0.4080 | Val AUC: 0.6749
+ Epoch 030 | Loss: 0.3300 | Val AUC: 0.6644
+ Epoch 040 | Loss: 0.2840 | Val AUC: 0.6769
+ Epoch 050 | Loss: 0.2628 | Val AUC: 0.6788
+ Epoch 060 | Loss: 0.2430 | Val AUC: 0.6715
+ Epoch 070 | Loss: 0.2226 | Val AUC: 0.6621
+ Epoch 080 | Loss: 0.2122 | Val AUC: 0.6748
+ Epoch 090 | Loss: 0.1975 | Val AUC: 0.6636
+ Epoch 100 | Loss: 0.1898 | Val AUC: 0.6677
+
+Trening modela: GAT
+ Epoch 010 | Loss: 0.6565 | Val AUC: 0.6241
+ Epoch 020 | Loss: 0.4754 | Val AUC: 0.7306
+ Epoch 030 | Loss: 0.3749 | Val AUC: 0.7309
+ Epoch 040 | Loss: 0.3192 | Val AUC: 0.7335
+ Epoch 050 | Loss: 0.2795 | Val AUC: 0.7247
+ Epoch 060 | Loss: 0.2468 | Val AUC: 0.7264
+ Epoch 070 | Loss: 0.2193 | Val AUC: 0.7236
+ Epoch 080 | Loss: 0.1987 | Val AUC: 0.7203
+ Epoch 090 | Loss: 0.1826 | Val AUC: 0.7121
+ Epoch 100 | Loss: 0.1651 | Val AUC: 0.7119
+
+========== DATASET: DCh-Miner ==========
+Učitavam: /home/ivanam/CBMS_bioWork/eda/data/BioSNAP/DCh-Miner_miner-disease-chemical.tsv.gz
+
+Trening modela: SAGE
+ Epoch 010 | Loss: 0.6791 | Val AUC: 0.7493
+ Epoch 020 | Loss: 0.6071 | Val AUC: 0.8382
+ Epoch 030 | Loss: 0.5621 | Val AUC: 0.8749
+ Epoch 040 | Loss: 0.5329 | Val AUC: 0.8953
+ Epoch 050 | Loss: 0.5174 | Val AUC: 0.9069
+ Epoch 060 | Loss: 0.5100 | Val AUC: 0.9155
+ Epoch 070 | Loss: 0.5023 | Val AUC: 0.9226
+ Epoch 080 | Loss: 0.4985 | Val AUC: 0.9292
+ Epoch 090 | Loss: 0.4980 | Val AUC: 0.9218
+ Epoch 100 | Loss: 0.4948 | Val AUC: 0.9146
+
+Trening modela: GAT
+ Epoch 010 | Loss: 0.6407 | Val AUC: 0.8440
+ Epoch 020 | Loss: 0.5943 | Val AUC: 0.8995
+ Epoch 030 | Loss: 0.6191 | Val AUC: 0.8818
+ Epoch 040 | Loss: 0.5476 | Val AUC: 0.9087
+ Epoch 050 | Loss: 0.5672 | Val AUC: 0.9112
+ Epoch 060 | Loss: 0.5676 | Val AUC: 0.9102
+ Epoch 070 | Loss: 0.5348 | Val AUC: 0.9120
+ Epoch 080 | Loss: 0.5135 | Val AUC: 0.9106
+ Epoch 090 | Loss: 0.5402 | Val AUC: 0.9056
+ Epoch 100 | Loss: 0.5215 | Val AUC: 0.9141
+
+EKSPERIMENT GOTOV!
+     Dataset Model  AUC_Overall  AUC_ColdStart
+0  ChG-Miner  SAGE       0.6763         0.4846
+1  ChG-Miner   GAT       0.7509         0.5943
+2  DCh-Miner  SAGE       0.9299         0.2658
+3  DCh-Miner   GAT       0.9189         0.1837
+All files done.

@@ -1,0 +1,5 @@
+Dataset,Model,AUC_Overall,AUC_ColdStart,AP_Overall,AP_ColdStart
+ChG-Miner,SAGE,0.6904,0.5047,0.6819,0.319
+ChG-Miner,GAT,0.7373,0.555,0.7673,0.4305
+DCh-Miner,SAGE,0.9292,0.2888,0.9298,0.0097
+DCh-Miner,GAT,0.9269,0.3483,0.8686,0.0116

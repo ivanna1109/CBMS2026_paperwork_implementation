@@ -1,0 +1,33 @@
+=== HETEROGENEOUS KNOWLEDGE GRAPH REPORT ===
+
+1. NODE STATISTICS
+  - Drug: 5322 nodes
+  - Gene: 2325 nodes
+  - Disease: 5536 nodes
+
+2. EDGE STATISTICS
+  - ('drug', 'targets', 'gene'): 15139 edges
+  - ('drug', 'treats', 'disease'): 466657 edges
+
+3. CROSS-DOMAIN CONNECTIVITY (THE BRIDGE)
+Drugs with <= 1 disease connections: 3721
+  -> Potential knowledge recovery (>= 5 gene links): 235 drugs
+Drugs with <= 2 disease connections: 3760
+  -> Potential knowledge recovery (>= 5 gene links): 244 drugs
+Drugs with <= 3 disease connections: 3793
+  -> Potential knowledge recovery (>= 5 gene links): 249 drugs
+
+4. LATEX SUMMARY TABLE
+---------------
+\begin{table}[h]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Entity & Count & Relations \\ 
+\midrule
+Drugs & 5322 & 466657 (Treats) \\ 
+Genes & 2325 & 15139 (Targets) \\ 
+Diseases & 5536 & - \\ 
+\bottomrule
+\end{tabular}
+\end{table}

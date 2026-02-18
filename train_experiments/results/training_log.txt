@@ -1,0 +1,184 @@
+=== STARTING FULL EXPERIMENT ===
+
+========== DATASET: ChG-Miner ==========
+Učitavam: /home/ivanam/CBMS_bioWork/eda/data/BioSNAP/ChG-Miner_miner-chem-gene.tsv.gz
+
+Training model: SAGE
+ Epoch 010 | Loss: 0.5327
+   > Validacija: AUC=0.6556, AP=0.6561
+   > Cold Start Validacija: AUC=0.4750, AP=0.2959
+--------------------------------------------------
+ Epoch 020 | Loss: 0.4007
+   > Validacija: AUC=0.6771, AP=0.6835
+   > Cold Start Validacija: AUC=0.4886, AP=0.3019
+--------------------------------------------------
+ Epoch 030 | Loss: 0.3294
+   > Validacija: AUC=0.6849, AP=0.6921
+   > Cold Start Validacija: AUC=0.4836, AP=0.3044
+--------------------------------------------------
+ Epoch 040 | Loss: 0.2849
+   > Validacija: AUC=0.6812, AP=0.6794
+   > Cold Start Validacija: AUC=0.4901, AP=0.3051
+--------------------------------------------------
+ Epoch 050 | Loss: 0.2595
+   > Validacija: AUC=0.6910, AP=0.6843
+   > Cold Start Validacija: AUC=0.5027, AP=0.3101
+--------------------------------------------------
+ Epoch 060 | Loss: 0.2335
+   > Validacija: AUC=0.6826, AP=0.6660
+   > Cold Start Validacija: AUC=0.5008, AP=0.3073
+--------------------------------------------------
+ Epoch 070 | Loss: 0.2233
+   > Validacija: AUC=0.6745, AP=0.6504
+   > Cold Start Validacija: AUC=0.4988, AP=0.3058
+--------------------------------------------------
+ Epoch 080 | Loss: 0.2094
+   > Validacija: AUC=0.6853, AP=0.6672
+   > Cold Start Validacija: AUC=0.5018, AP=0.3086
+--------------------------------------------------
+ Epoch 090 | Loss: 0.1973
+   > Validacija: AUC=0.6721, AP=0.6365
+   > Cold Start Validacija: AUC=0.5031, AP=0.3039
+--------------------------------------------------
+ Epoch 100 | Loss: 0.1893
+   > Validacija: AUC=0.6768, AP=0.6472
+   > Cold Start Validacija: AUC=0.5037, AP=0.3066
+--------------------------------------------------
+
+Training model: GAT
+ Epoch 010 | Loss: 0.6422
+   > Validacija: AUC=0.7094, AP=0.7410
+   > Cold Start Validacija: AUC=0.5757, AP=0.4027
+--------------------------------------------------
+ Epoch 020 | Loss: 0.4697
+   > Validacija: AUC=0.7259, AP=0.7438
+   > Cold Start Validacija: AUC=0.5722, AP=0.4248
+--------------------------------------------------
+ Epoch 030 | Loss: 0.3885
+   > Validacija: AUC=0.7241, AP=0.7554
+   > Cold Start Validacija: AUC=0.5630, AP=0.4339
+--------------------------------------------------
+ Epoch 040 | Loss: 0.3320
+   > Validacija: AUC=0.7203, AP=0.7384
+   > Cold Start Validacija: AUC=0.5537, AP=0.4261
+--------------------------------------------------
+ Epoch 050 | Loss: 0.2932
+   > Validacija: AUC=0.7223, AP=0.7304
+   > Cold Start Validacija: AUC=0.5636, AP=0.4332
+--------------------------------------------------
+ Epoch 060 | Loss: 0.2599
+   > Validacija: AUC=0.7264, AP=0.7365
+   > Cold Start Validacija: AUC=0.5676, AP=0.4364
+--------------------------------------------------
+ Epoch 070 | Loss: 0.2358
+   > Validacija: AUC=0.7220, AP=0.7202
+   > Cold Start Validacija: AUC=0.5721, AP=0.4364
+--------------------------------------------------
+ Epoch 080 | Loss: 0.2164
+   > Validacija: AUC=0.7213, AP=0.7145
+   > Cold Start Validacija: AUC=0.5749, AP=0.4362
+--------------------------------------------------
+ Epoch 090 | Loss: 0.1985
+   > Validacija: AUC=0.7174, AP=0.7059
+   > Cold Start Validacija: AUC=0.5761, AP=0.4342
+--------------------------------------------------
+ Epoch 100 | Loss: 0.1816
+   > Validacija: AUC=0.7170, AP=0.7039
+   > Cold Start Validacija: AUC=0.5770, AP=0.4322
+--------------------------------------------------
+
+========== DATASET: DCh-Miner ==========
+Učitavam: /home/ivanam/CBMS_bioWork/eda/data/BioSNAP/DCh-Miner_miner-disease-chemical.tsv.gz
+
+Training model: SAGE
+ Epoch 010 | Loss: 0.6722
+   > Validacija: AUC=0.7972, AP=0.7191
+   > Cold Start Validacija: AUC=0.6098, AP=0.0187
+--------------------------------------------------
+ Epoch 020 | Loss: 0.5870
+   > Validacija: AUC=0.8416, AP=0.7937
+   > Cold Start Validacija: AUC=0.5803, AP=0.0188
+--------------------------------------------------
+ Epoch 030 | Loss: 0.5491
+   > Validacija: AUC=0.8987, AP=0.8788
+   > Cold Start Validacija: AUC=0.4907, AP=0.0143
+--------------------------------------------------
+ Epoch 040 | Loss: 0.5276
+   > Validacija: AUC=0.9033, AP=0.8969
+   > Cold Start Validacija: AUC=0.3926, AP=0.0103
+--------------------------------------------------
+ Epoch 050 | Loss: 0.5135
+   > Validacija: AUC=0.9134, AP=0.9140
+   > Cold Start Validacija: AUC=0.3282, AP=0.0092
+--------------------------------------------------
+ Epoch 060 | Loss: 0.5088
+   > Validacija: AUC=0.9164, AP=0.9173
+   > Cold Start Validacija: AUC=0.2708, AP=0.0082
+--------------------------------------------------
+ Epoch 070 | Loss: 0.4996
+   > Validacija: AUC=0.9267, AP=0.9274
+   > Cold Start Validacija: AUC=0.2584, AP=0.0081
+--------------------------------------------------
+ Epoch 080 | Loss: 0.4994
+   > Validacija: AUC=0.9204, AP=0.9234
+   > Cold Start Validacija: AUC=0.2359, AP=0.0079
+--------------------------------------------------
+ Epoch 090 | Loss: 0.4950
+   > Validacija: AUC=0.9080, AP=0.9148
+   > Cold Start Validacija: AUC=0.1987, AP=0.0076
+--------------------------------------------------
+ Epoch 100 | Loss: 0.4925
+   > Validacija: AUC=0.9192, AP=0.9233
+   > Cold Start Validacija: AUC=0.2152, AP=0.0078
+--------------------------------------------------
+
+Training model: GAT
+ Epoch 010 | Loss: 0.6454
+   > Validacija: AUC=0.9046, AP=0.8027
+   > Cold Start Validacija: AUC=0.3301, AP=0.0112
+--------------------------------------------------
+ Epoch 020 | Loss: 0.5931
+   > Validacija: AUC=0.9264, AP=0.8671
+   > Cold Start Validacija: AUC=0.3471, AP=0.0114
+--------------------------------------------------
+ Epoch 030 | Loss: 0.5806
+   > Validacija: AUC=0.8955, AP=0.8105
+   > Cold Start Validacija: AUC=0.2660, AP=0.0092
+--------------------------------------------------
+ Epoch 040 | Loss: 0.5654
+   > Validacija: AUC=0.9141, AP=0.8548
+   > Cold Start Validacija: AUC=0.2433, AP=0.0090
+--------------------------------------------------
+ Epoch 050 | Loss: 0.5257
+   > Validacija: AUC=0.9036, AP=0.8778
+   > Cold Start Validacija: AUC=0.2376, AP=0.0089
+--------------------------------------------------
+ Epoch 060 | Loss: 0.5438
+   > Validacija: AUC=0.8940, AP=0.8257
+   > Cold Start Validacija: AUC=0.1700, AP=0.0083
+--------------------------------------------------
+ Epoch 070 | Loss: 0.5378
+   > Validacija: AUC=0.9135, AP=0.8827
+   > Cold Start Validacija: AUC=0.2196, AP=0.0087
+--------------------------------------------------
+ Epoch 080 | Loss: 0.5171
+   > Validacija: AUC=0.9036, AP=0.8962
+   > Cold Start Validacija: AUC=0.2343, AP=0.0088
+--------------------------------------------------
+ Epoch 090 | Loss: 0.5192
+   > Validacija: AUC=0.9100, AP=0.9033
+   > Cold Start Validacija: AUC=0.1889, AP=0.0084
+--------------------------------------------------
+ Epoch 100 | Loss: 0.5018
+   > Validacija: AUC=0.9016, AP=0.8955
+   > Cold Start Validacija: AUC=0.1808, AP=0.0084
+--------------------------------------------------
+
+--- FINAL RESULTS TABLE ---
+     Dataset Model  AUC_Overall  AUC_ColdStart  AP_Overall  AP_ColdStart
+0  ChG-Miner  SAGE       0.6904         0.5047      0.6819        0.3190
+1  ChG-Miner   GAT       0.7373         0.5550      0.7673        0.4305
+2  DCh-Miner  SAGE       0.9292         0.2888      0.9298        0.0097
+3  DCh-Miner   GAT       0.9269         0.3483      0.8686        0.0116
+
+=== EXPERIMENT FINISHED ===

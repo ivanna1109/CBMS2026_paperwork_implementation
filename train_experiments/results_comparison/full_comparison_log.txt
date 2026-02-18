@@ -1,0 +1,77 @@
+=== STARTING FULL EXPERIMENT: GAT vs GraphSAGE ===
+
+
+##############################
+# MODEL TYPE: GAT
+##############################
+ GAT Epoch 010 | Loss: 0.3959 | Val AUC: 0.9103
+ GAT Epoch 020 | Loss: 0.2717 | Val AUC: 0.9514
+ GAT Epoch 030 | Loss: 0.2220 | Val AUC: 0.9684
+ GAT Epoch 040 | Loss: 0.1932 | Val AUC: 0.9742
+ GAT Epoch 050 | Loss: 0.1747 | Val AUC: 0.9778
+ GAT Epoch 060 | Loss: 0.1715 | Val AUC: 0.9801
+ GAT Epoch 070 | Loss: 0.1606 | Val AUC: 0.9815
+ GAT Epoch 080 | Loss: 0.1951 | Val AUC: 0.9812
+ GAT Epoch 090 | Loss: 0.1755 | Val AUC: 0.9788
+ GAT Epoch 100 | Loss: 0.1645 | Val AUC: 0.9794
+
+========================================
+DETALJNA COLD START ANALIZA
+========================================
+Broj testiranih parova: 67041
+Cold AUC: 0.8361
+Cold AP:  0.0068
+========================================
+
+=== TOP COLD-START SUCCESS STORIES (Qualitative Analysis) ===
+Drug Name/ID    | Disease Name/ID | Confidence
+-------------------------------------------------------
+DB01344         | MESH:D001145    | 0.9984
+DB01545         | MESH:D000647    | 0.8793
+DB01352         | MESH:D011041    | 0.8182
+Chemical        | # Disease(MESH) | 0.4045
+DB00340         | MESH:D014987    | 0.3349
+=======================================================
+
+
+
+##############################
+# MODEL TYPE: SAGE
+##############################
+ SAGE Epoch 010 | Loss: 0.2734 | Val AUC: 0.9596
+ SAGE Epoch 020 | Loss: 0.1744 | Val AUC: 0.9783
+ SAGE Epoch 030 | Loss: 0.1489 | Val AUC: 0.9848
+ SAGE Epoch 040 | Loss: 0.1269 | Val AUC: 0.9872
+ SAGE Epoch 050 | Loss: 0.1179 | Val AUC: 0.9882
+ SAGE Epoch 060 | Loss: 0.1131 | Val AUC: 0.9889
+ SAGE Epoch 070 | Loss: 0.1093 | Val AUC: 0.9892
+ SAGE Epoch 080 | Loss: 0.1066 | Val AUC: 0.9894
+ SAGE Epoch 090 | Loss: 0.1043 | Val AUC: 0.9895
+ SAGE Epoch 100 | Loss: 0.1021 | Val AUC: 0.9896
+
+========================================
+DETALJNA COLD START ANALIZA
+========================================
+Broj testiranih parova: 66913
+Cold AUC: 0.8945
+Cold AP:  0.0684
+========================================
+
+=== TOP COLD-START SUCCESS STORIES (Qualitative Analysis) ===
+Drug Name/ID    | Disease Name/ID | Confidence
+-------------------------------------------------------
+DB00423         | MESH:D012640    | 0.8850
+DB00147         | MESH:D012640    | 0.8690
+DB02216         | MESH:D019966    | 0.6519
+DB01264         | MESH:D013262    | 0.5420
+DB00424         | MESH:D007674    | 0.4249
+=======================================================
+
+
+==============================
+FINAL COMPARISON TABLE
+==============================
+Model  Test_AUC  Test_AP
+  GAT    0.9813   0.9731
+ SAGE    0.9887   0.9868
+==============================

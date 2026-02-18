@@ -1,0 +1,29 @@
+=== BIOSNAP DATASET ANALYSIS REPORT (DCh-Miner) ===
+
+1. NETWORK TOPOLOGY
+Total Nodes: 7199
+Total Unique Edges: 466657
+Graph Density: 1.80112463e-02
+
+2. DEGREE STATISTICS
+Average Degree: 129.64
+Max Degree: 3593.0
+
+3. COLD START ANALYSIS
+Nodes with degree <= 1: 538 (7.47%)
+Nodes with degree <= 2: 836 (11.61%)
+Nodes with degree <= 3: 1092 (15.17%)
+Nodes with degree <= 5: 1482 (20.59%)
+
+4. LATEX TABLE
+----------
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|r|}
+\hline
+Nodes & 7199 \\ 
+Edges & 466657 \\ 
+Avg. Degree & 129.64 \\ 
+Density & 1.8011e-02 \\ \hline
+\end{tabular}
+\end{table}

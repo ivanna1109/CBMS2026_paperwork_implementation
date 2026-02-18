@@ -1,0 +1,14 @@
+Učitavam fajlove...
+
+==============================
+ANALIZA POKLAPANJA LEKOVA
+==============================
+Lekova u ChG (Drug-Gene):     5018
+Lekova u DCh (Drug-Disease):  1663
+Zajedničkih lekova:           1359
+Procenat pokrivenosti DCh:    81.72%
+
+Primeri zajedničkih ID-jeva:
+['DB04794', 'DB01190', 'DB00499', 'DB01025', 'DB00378']
+==============================
+All files done.

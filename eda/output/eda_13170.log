@@ -1,0 +1,4 @@
+Učitavanje lokalnog fajla: /home/ivanam/CBMS_bioWork/eda/data/BioSNAP/DCh-Miner_miner-disease-chemical.tsv.gz
+Kolone u fajlu: ['# Disease(MESH)', 'Chemical']
+Done! Results in: results/dataset_analysis_report-DCh.txt
+All files done.
