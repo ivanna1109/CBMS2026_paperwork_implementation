@@ -10,7 +10,7 @@ This work addresses the critical cold-start challenge in link prediction within 
 - **Latent Bridge:** Demonstrating how auxiliary genomic data compensates for primary disease domain sparsity.
 - **Performance:** GraphSAGE achieves a Cold AUC of **0.8945**, significantly outperforming GAT in sparse scenarios.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 ├── eda/                        # Exploratory Data Analysis notebooks and dataset processing scripts
